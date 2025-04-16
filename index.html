@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login or Sign Up</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Welcome</h2>
+
+    <!-- Login Form -->
+    <h3>Login</h3>
+    <form id="loginForm">
+      <input type="text" id="loginUsername" placeholder="Username" required />
+      <input type="password" id="loginPassword" placeholder="Password" required />
+      <button type="submit">Log In</button>
+    </form>
+    <p id="loginMessage" class="message"></p>
+
+    <hr />
+
+    <!-- Sign-Up Form -->
+    <h3>Sign Up</h3>
+    <form id="signupForm">
+      <input type="text" id="signupUsername" placeholder="New Username" required />
+      <input type="password" id="signupPassword" placeholder="New Password (min 6 chars)" required />
+      <button type="submit">Sign Up</button>
+    </form>
+    <p id="signupMessage" class="message"></p>
+
+    <p><a href="reset.html">Forgot your password?</a></p>
+  </div>
+
+  <script src="auth.js"></script>
+</body>
+</html>
