@@ -1,0 +1,17 @@
+<script>
+  document.getElementById("resetForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const usernameInput = document.getElementById("resetUsername").value.trim();
+    const message = document.getElementById("resetMessage");
+
+    const storedUser = JSON.parse(localStorage.getItem("user"));
+
+    if (!storedUser || storedUser.username.toLowerCase() !== usernameInput.toLowerCase()) {
+      message.textContent = "User not found.";
+      message.style.color = "red";
+    } else {
+      message.textContent = "Your password is: " + storedUser.password;
+      message.style.color = "green";
+    }
+  });
+</script>
